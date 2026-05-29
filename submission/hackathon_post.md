@@ -1,4 +1,4 @@
-# DrugPath — Biomedical Drug Reasoning Agent
+# DrugPath -> Biomedical Drug Reasoning Agent
 
 ## Agent Name
 **DrugPath**
@@ -16,19 +16,19 @@ multi-hop paths through the graph.
 **1. Drug interaction checking with mechanism explanation**
 Instead of "warfarin + aspirin = dangerous," DrugPath explains: *"These drugs
 interact because warfarin inhibits VKORC1 (Vitamin K pathway) while aspirin
-irreversibly blocks COX-1 — both affect different steps of the clotting cascade,
+irreversibly blocks COX-1 - both affect different steps of the clotting cascade,
 creating synergistic bleeding risk."* The answer traces the path: Drug → shared
 Gene targets → Pathway → clinical outcome.
 
 **2. Drug repurposing discovery**
-*"What existing approved drugs could work for Alzheimer's?"* — This requires a
+*"What existing approved drugs could work for Alzheimer's?"* - This requires a
 3-hop traversal: find drugs → whose molecular targets (Genes) → are associated
 with Alzheimer's Disease → but the drug isn't currently indicated for it. No SQL
 join can express this cleanly. In the graph it's one Cypher query.
 
 **3. Comprehensive drug profiles**
 Full pharmacological context for any drug: indications, molecular targets,
-biological pathways, side effects — all pulled from graph relationships rather
+biological pathways, side effects - all pulled from graph relationships rather
 than flat attributes.
 
 ## Dataset and Why a Graph Fits
@@ -54,7 +54,7 @@ A knowledge graph can answer: *"Why might Metformin work against cancer?"*
 ```
 
 This is a real path returned by the live graph. It reveals a biologically
-plausible repurposing hypothesis that is not in any flat table — it emerges from
+plausible repurposing hypothesis that is not in any flat table - it emerges from
 the **structure of the graph itself**.
 
 **Node types:**
@@ -77,8 +77,8 @@ LOCALIZES_TO, INCLUDES
 
 | Tool | Type | What it enables |
 |---|---|---|
-| `drug_interaction_checker` | Cypher Template | Given two drug names, traverses shared gene targets and pathways to explain the interaction mechanism — not just flag it |
-| `drug_repurposing_explorer` | Cypher Template | Given a disease, finds drugs approved for OTHER conditions whose molecular targets associate with this disease — pure graph reasoning |
+| `drug_interaction_checker` | Cypher Template | Given two drug names, traverses shared gene targets and pathways to explain the interaction mechanism - not just flag it |
+| `drug_repurposing_explorer` | Cypher Template | Given a disease, finds drugs approved for OTHER conditions whose molecular targets associate with this disease - pure graph reasoning |
 | `drug_profile_lookup` | Cypher Template | Full pharmacological profile: targets, indications, side effects, pathways, drug class |
 | `find_similar_drugs` | Similarity Search | Vector search on drug name + mechanism embeddings to find pharmacologically similar compounds |
 
@@ -86,14 +86,14 @@ LOCALIZES_TO, INCLUDES
 
 **User:** "Can I take warfarin and aspirin together?"
 
-**DrugPath:** "These two drugs share several molecular targets in the graph —
+**DrugPath:** "These two drugs share several molecular targets in the graph -
 **CYP2C9, CYP2C8, CYP2C19** (the enzymes that metabolise warfarin) and **ALB**
-(plasma albumin) — and overlap in the **arachidonic-acid metabolism** pathway.
+(plasma albumin) - and overlap in the **arachidonic-acid metabolism** pathway.
 That means aspirin can compete for warfarin's metabolism and displace it from
 albumin, raising free warfarin levels, while also acting on the clotting cascade
-itself — a combination associated with increased bleeding risk. Path traversed:
+itself - a combination associated with increased bleeding risk. Path traversed:
 Warfarin → shared Genes (CYP2C9, ALB) ← Aspirin. *This information is for
-educational purposes only — always consult a healthcare professional.*"
+educational purposes only - always consult a healthcare professional.*"
 
 ---
 
@@ -102,9 +102,9 @@ educational purposes only — always consult a healthcare professional.*"
 **DrugPath:** "Here are compounds whose molecular targets associate with
 Alzheimer's disease in the graph but which are not currently indicated for it:
 
-1. **Dextromethorphan** — via the nicotinic receptors CHRNA4 / CHRNA7 / CHRNB2
-2. **Nicotine** — via the cholinergic targets CHAT, CHRNA4, CHRNA7
-3. **Amitriptyline** — via the serotonergic targets HTR2A, HTR6, SLC6A4
+1. **Dextromethorphan** - via the nicotinic receptors CHRNA4 / CHRNA7 / CHRNB2
+2. **Nicotine** - via the cholinergic targets CHAT, CHRNA4, CHRNA7
+3. **Amitriptyline** - via the serotonergic targets HTR2A, HTR6, SLC6A4
 
 The cholinergic and serotonergic targets are biologically on-point for
 Alzheimer's. Path: Drug → [BINDS_GENE] → Gene → [ASSOCIATES_WITH] → Alzheimer's
@@ -121,11 +121,11 @@ purposes only.*"
 
 ![Nodes overview](img_1.png)
 
-**Agent in action — full drug profile** (Aura Console):
+**Agent in action - full drug profile** (Aura Console):
 
 ![Metformin profile](img_2.png)
 
-**Agent in action — similarity search** (Aura Console):
+**Agent in action - similarity search** (Aura Console):
 
 ![Drugs similar to aspirin](img_3.png)
 
@@ -140,7 +140,7 @@ Landing page / live demo: **https://qualv13.github.io/neo4j-agent/**
 
 Source code: **https://github.com/qualv13/neo4j-agent**
 
-Published agent endpoint: _[optional — paste once the agent is public]_
+Published agent endpoint: _[will be added after receiving credits]_
 
 ## What Makes DrugPath Different
 
