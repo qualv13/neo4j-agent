@@ -13,6 +13,8 @@ cancer?"* — by traversing
 That 3-hop drug-repurposing inference is impossible in a flat database. Built for
 the Neo4j Aura Agent Hackathon 2026.
 
+**🌐 Live demo:** https://qualv13.github.io/neo4j-agent/
+
 ## Graph schema (summary)
 
 **Node types:**

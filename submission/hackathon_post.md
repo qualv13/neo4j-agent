@@ -136,7 +136,9 @@ purposes only.*"
 
 ## Live Agent
 
-Landing page / live demo: _[paste your hosted web/ URL once deployed]_
+Landing page / live demo: **https://qualv13.github.io/neo4j-agent/**
+
+Source code: **https://github.com/qualv13/neo4j-agent**
 
 Published agent endpoint: _[optional — paste once the agent is public]_
 
