@@ -1,0 +1,26 @@
+# Secrets
+.env
+# AuraDB credentials file downloaded from the console
+Neo4j-*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+drugpath-env/
+venv/
+
+# Downloaded / generated data
+data/
+*.tsv
+*.csv
+*.sif
+*.gz
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
