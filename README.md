@@ -91,6 +91,14 @@ domain)**, no usage restrictions. It integrates 29 public biomedical databases
 (DrugBank, OMIM, DisGeNET, Reactome, Gene Ontology, SIDER, and more) into a
 single graph.
 
+## Screenshots
+
+![img.png](submission/img.png)
+![img_1.png](submission/img_1.png)
+![img_2.png](submission/img_2.png)
+![img_3.png](submission/img_3.png)
+
+
 ## Disclaimer
 
 ⚠️ DrugPath is an **educational and research tool**. It does **not** provide
