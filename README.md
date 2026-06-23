@@ -1,4 +1,4 @@
-# DrugPath [TOP6!](https://community.neo4j.com/t/aura-agent-hackathon-winners-announced/79568)
+# DrugPath [TOP6 place in Neo4j hackathon](https://community.neo4j.com/t/aura-agent-hackathon-winners-announced/79568)
 
 **DrugPath** is an AI agent that navigates a biomedical knowledge graph to
 answer questions about drugs, their mechanisms of action, interactions, and
