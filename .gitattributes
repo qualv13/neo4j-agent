@@ -1,0 +1,4 @@
+# The landing page under web/ is presentation, not the project. Keep it out of
+# the language stats so the repo reports the agent's Python and Cypher instead
+# of one 24 kB HTML file.
+web/** linguist-documentation
