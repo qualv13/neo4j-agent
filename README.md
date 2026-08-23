@@ -86,8 +86,11 @@ scripts in order (`etl/01` → `etl/05`), configure the Aura Agent
 
 ## Dataset and license
 
-[Hetionet v1.0](https://github.com/hetio/hetionet) — released under **CC0 (public
-domain)**, no usage restrictions. It integrates 29 public biomedical databases
+The code in this repository is MIT, see [LICENSE](LICENSE).
+
+The data is not mine to license.
+[Hetionet v1.0](https://github.com/hetio/hetionet) is released under **CC0
+(public domain)**, no usage restrictions. It integrates 29 public biomedical databases
 (DrugBank, OMIM, DisGeNET, Reactome, Gene Ontology, SIDER, and more) into a
 single graph.
 
